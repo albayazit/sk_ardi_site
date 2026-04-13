@@ -4,13 +4,13 @@ import { Building2, Award, Users, Clock } from "lucide-react";
 const features = [
   {
     icon: Building2,
-    title: "50+ домов",
-    description: "Построено за 8 лет работы",
+    title: "100+ домов",
+    description: "Построено за время работы",
   },
   {
     icon: Award,
-    title: "Премиум качество",
-    description: "Собственное производство материалов",
+    title: "10+ лет на рынке",
+    description: "Опыт и надёжность в каждом проекте",
   },
   {
     icon: Users,
@@ -40,7 +40,7 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-lg text-gray-600">
               <p>
-                Мы специализируемся на строительстве премиальных частных домов в Татарстане и по всей России.
+                Мы специализируемся на строительстве частных домов в Татарстане.
                 Каждый проект — это уникальное решение, созданное с учетом пожеланий наших клиентов.
               </p>
               <p>

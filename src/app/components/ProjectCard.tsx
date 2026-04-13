@@ -36,11 +36,6 @@ export function ProjectCard({ title, location, area, bedrooms, price, image, sta
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-        {status === "sold" && (
-          <div className="absolute top-4 right-4 bg-gray-900/90 backdrop-blur-sm text-white px-4 py-2 rounded-lg">
-            Продано
-          </div>
-        )}
       </div>
 
       <div className="space-y-3">

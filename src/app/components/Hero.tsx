@@ -27,8 +27,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-              Строим дома<br />вашей мечты
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-none">
+              Строим качественные<br />дома
             </h1>
           </motion.div>
 
@@ -38,7 +38,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl text-white/90 mb-8 max-w-xl"
           >
-            Премиальное строительство частных домов в Татарстане и за его пределами
+            Строительство частных домов в Татарстане
           </motion.p>
 
           <motion.div
@@ -47,19 +47,19 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <a
-              href="#projects"
+            <button
+              onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
               className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors group"
             >
-              Смотреть проекты
+              Расчет стоимости
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#contact"
+            </button>
+            <button
+              onClick={() => document.getElementById('completed')?.scrollIntoView({ behavior: 'smooth' })}
               className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
             >
-              Получить консультацию
-            </a>
+              Смотреть проекты
+            </button>
           </motion.div>
         </div>
       </div>

@@ -1,33 +1,60 @@
 import { ProjectCard } from "./ProjectCard";
 import { motion } from "motion/react";
+import house1 from "../../assets/house-1.jpg";
+import house2 from "../../assets/house-2.jpg";
+import house3 from "../../assets/house-3.jpg";
+import house4 from "../../assets/house-4.jpg";
+import house5 from "../../assets/house-5.jpg";
+import house6 from "../../assets/house-6.jpg";
 
 const availableProjects = [
   {
-    title: "Резиденция Riverside",
-    location: "Казань, пригород",
-    area: "320 м²",
-    bedrooms: 4,
-    price: "от 18 млн ₽",
-    image: "https://images.unsplash.com/photo-1706808849803-f61304e024ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    status: "available" as const,
-  },
-  {
-    title: "Дом Modern Loft",
-    location: "Иннополис",
-    area: "280 м²",
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "120 м²",
     bedrooms: 3,
-    price: "от 15 млн ₽",
-    image: "https://images.unsplash.com/photo-1706855203772-c249b75fe016?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    status: "available" as const,
+    image: house1,
+    status: "sold" as const,
   },
   {
-    title: "Вилла Harmony",
-    location: "Зеленодольск",
-    area: "380 м²",
-    bedrooms: 5,
-    price: "от 22 млн ₽",
-    image: "https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    status: "available" as const,
+    title: "Двухэтажный дом",
+    location: "Татарстан",
+    area: "220 м²",
+    bedrooms: 4,
+    image: house2,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "130 м²",
+    bedrooms: 3,
+    image: house3,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "115 м²",
+    bedrooms: 3,
+    image: house4,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "125 м²",
+    bedrooms: 3,
+    image: house5,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "110 м²",
+    bedrooms: 3,
+    image: house6,
+    status: "sold" as const,
   },
 ];
 
@@ -43,10 +70,10 @@ export function ProjectsSection() {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Проекты на продажу
+            Наши работы
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl">
-            Готовые решения для комфортной жизни за городом
+            Реализованные проекты строительной компании Арди
           </p>
         </motion.div>
 

@@ -1,53 +1,59 @@
 import { ProjectCard } from "./ProjectCard";
 import { motion } from "motion/react";
+import house1 from "../../assets/house-1.jpg";
+import house2 from "../../assets/house-2.jpg";
+import house3 from "../../assets/house-3.jpg";
+import house4 from "../../assets/house-4.jpg";
+import house5 from "../../assets/house-5.jpg";
+import house6 from "../../assets/house-6.jpg";
 
 const completedProjects = [
   {
-    title: "Резиденция BlackStone",
-    location: "Казань, КП «Лесной»",
-    area: "450 м²",
-    bedrooms: 6,
-    image: "https://images.unsplash.com/photo-1634841999653-dad28648a43a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    status: "sold" as const,
-  },
-  {
-    title: "Дом у озера",
-    location: "Лаишево",
-    area: "295 м²",
-    bedrooms: 4,
-    image: "https://images.unsplash.com/photo-1771756743534-4fe2cda63f0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    status: "sold" as const,
-  },
-  {
-    title: "Villa Moderna",
-    location: "Набережные Челны",
-    area: "340 м²",
-    bedrooms: 4,
-    image: "https://images.unsplash.com/photo-1749976907725-d1029d3977f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    status: "sold" as const,
-  },
-  {
-    title: "Семейное гнездо",
-    location: "Бугульма",
-    area: "260 м²",
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "120 м²",
     bedrooms: 3,
-    image: "https://images.unsplash.com/photo-1762117360986-9753aef7680f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: house1,
     status: "sold" as const,
   },
   {
-    title: "Эко-дом Greenville",
-    location: "Альметьевск",
-    area: "310 м²",
+    title: "Двухэтажный дом",
+    location: "Татарстан",
+    area: "220 м²",
     bedrooms: 4,
-    image: "https://images.unsplash.com/photo-1774848010816-a6f114c2c3b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: house2,
     status: "sold" as const,
   },
   {
-    title: "Загородная усадьба",
-    location: "Нижнекамск",
-    area: "285 м²",
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "130 м²",
     bedrooms: 3,
-    image: "https://images.unsplash.com/photo-1762117360928-1548ff7ab5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    image: house3,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "115 м²",
+    bedrooms: 3,
+    image: house4,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "125 м²",
+    bedrooms: 3,
+    image: house5,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "110 м²",
+    bedrooms: 3,
+    image: house6,
     status: "sold" as const,
   },
 ];

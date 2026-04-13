@@ -12,19 +12,22 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="Арди" className="h-12 w-auto rounded-lg" />
+          <img src={logo} alt="Арди" className="h-12 w-12 rounded-full object-cover" />
           <span className="text-xl font-bold text-gray-900">СК Арди</span>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#projects" className="text-gray-700 hover:text-gray-900 transition-colors">
-            Проекты
-          </a>
           <a href="#completed" className="text-gray-700 hover:text-gray-900 transition-colors">
-            Реализованные
+            Реализованные проекты
           </a>
           <a href="#about" className="text-gray-700 hover:text-gray-900 transition-colors">
             О компании
+          </a>
+          <a href="#reviews" className="text-gray-700 hover:text-gray-900 transition-colors">
+            Отзывы
+          </a>
+          <a href="#contact" className="text-gray-700 hover:text-gray-900 transition-colors">
+            Контакты
           </a>
         </nav>
 

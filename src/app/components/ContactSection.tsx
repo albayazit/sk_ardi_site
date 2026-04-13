@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -19,7 +19,7 @@ export function ContactSection() {
               Свяжитесь с нами для бесплатной консультации и расчета стоимости проекта
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -55,21 +55,6 @@ export function ContactSection() {
                 </a>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="bg-white/10 p-4 rounded-lg mb-4">
-                  <MapPin size={32} />
-                </div>
-                <div className="text-gray-400 mb-2">Офис</div>
-                <div className="text-xl">
-                  г. Казань, ул. Пушкина, 1
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         </div>
