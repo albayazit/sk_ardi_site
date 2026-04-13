@@ -36,12 +36,12 @@ export function Header() {
             <Phone size={18} />
             <span>+7 987 225 00 39</span>
           </a>
-          <a
-            href="#contact"
+          <button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-gray-900 text-white px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-colors"
           >
             Связаться
-          </a>
+          </button>
         </div>
       </div>
     </motion.header>

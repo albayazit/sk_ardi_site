@@ -33,7 +33,7 @@ export function CalculatorSection() {
     setError("");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/bakhasanov@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/skardi2025@mail.ru", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
