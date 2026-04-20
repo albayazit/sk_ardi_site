@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { MapPin, Ruler, Bed } from "lucide-react";
+import { MapPin, Ruler, Bed, Shirt, Flame, Bath } from "lucide-react";
 import { useState } from "react";
 
 interface ProjectCardProps {
@@ -7,13 +7,14 @@ interface ProjectCardProps {
   location: string;
   area: string;
   bedrooms: number;
+  features?: string[];
   price?: string;
   image: string;
   status: "available" | "sold";
   index: number;
 }
 
-export function ProjectCard({ title, location, area, bedrooms, price, image, status, index }: ProjectCardProps) {
+export function ProjectCard({ title, location, area, bedrooms, features, price, image, status, index }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -60,9 +61,23 @@ export function ProjectCard({ title, location, area, bedrooms, price, image, sta
           </div>
           <div className="flex items-center gap-2">
             <Bed size={16} />
-            <span>{bedrooms} спален</span>
+            <span>{bedrooms} спальни</span>
           </div>
         </div>
+
+        {features && features.length > 0 && (
+          <div className="flex flex-wrap items-center gap-6 text-gray-600">
+            {features.map((f) => {
+              const icon = f === "Гардеробная" ? <Shirt size={16} /> : f === "Котельная" ? <Flame size={16} /> : f.includes("санузл") ? <Bath size={16} /> : null;
+              return (
+                <div key={f} className="flex items-center gap-2">
+                  {icon}
+                  <span>{f}</span>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </motion.div>
   );

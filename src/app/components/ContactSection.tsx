@@ -12,7 +12,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
               Начните строительство<br />вашего дома
             </h2>
             <p className="text-xl text-gray-300 mb-16">

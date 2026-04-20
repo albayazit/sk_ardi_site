@@ -11,17 +11,46 @@ const completedProjects = [
   {
     title: "Одноэтажный дом",
     location: "Татарстан",
-    area: "120 м²",
+    area: "90 м²",
     bedrooms: 3,
+    features: ["Гардеробная", "Котельная"],
     image: house1,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "100 м²",
+    bedrooms: 3,
+    features: ["Гардеробная", "Котельная"],
+    image: house2,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Татарстан",
+    area: "90 м²",
+    bedrooms: 3,
+    features: ["Гардеробная", "Котельная"],
+    image: house3,
+    status: "sold" as const,
+  },
+  {
+    title: "Одноэтажный дом",
+    location: "Удмуртия",
+    area: "138 м²",
+    bedrooms: 3,
+    features: ["Гардеробная", "Котельная"],
+    image: house4,
     status: "sold" as const,
   },
   {
     title: "Двухэтажный дом",
     location: "Татарстан",
-    area: "220 м²",
+    area: "160 м²",
     bedrooms: 4,
-    image: house2,
+    features: ["2 санузла"],
+    image: house5,
     status: "sold" as const,
   },
   {
@@ -29,30 +58,7 @@ const completedProjects = [
     location: "Татарстан",
     area: "130 м²",
     bedrooms: 3,
-    image: house3,
-    status: "sold" as const,
-  },
-  {
-    title: "Одноэтажный дом",
-    location: "Татарстан",
-    area: "115 м²",
-    bedrooms: 3,
-    image: house4,
-    status: "sold" as const,
-  },
-  {
-    title: "Одноэтажный дом",
-    location: "Татарстан",
-    area: "125 м²",
-    bedrooms: 3,
-    image: house5,
-    status: "sold" as const,
-  },
-  {
-    title: "Одноэтажный дом",
-    location: "Татарстан",
-    area: "110 м²",
-    bedrooms: 3,
+    features: ["Гардеробная", "Котельная"],
     image: house6,
     status: "sold" as const,
   },
@@ -69,7 +75,7 @@ export function CompletedSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
             Реализованные проекты
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl">

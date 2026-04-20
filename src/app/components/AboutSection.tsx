@@ -35,7 +35,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               О компании Арди
             </h2>
             <div className="space-y-4 text-lg text-gray-600">
@@ -45,7 +45,7 @@ export function AboutSection() {
               </p>
               <p>
                 Используем только проверенные технологии и материалы высочайшего качества.
-                Наша команда — это опытные архитекторы, инженеры и строители, для которых каждый дом — это произведение искусства.
+                Наша команда — это опытные архитекторы, инженеры и строители, для которых каждый дом — это воплощение мечты заказчика.
               </p>
               <p>
                 От первого эскиза до сдачи ключей мы полностью сопровождаем строительство,

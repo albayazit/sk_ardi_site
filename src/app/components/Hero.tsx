@@ -27,8 +27,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-none">
-              Строим качественные<br />дома
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+              Строим качественные дома
             </h1>
           </motion.div>
 
