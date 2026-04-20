@@ -120,7 +120,7 @@ export function CalculatorSection() {
                   const val = e.target.value;
                   if (val === "" || parseFloat(val) <= 1000) setArea(val);
                 }}
-                placeholder="Введите площадь, м² (от 20)"
+                placeholder="Введите площадь, м²"
                 className="w-full py-4 px-6 rounded-xl bg-white/10 hover:bg-white/20 focus:bg-white/20 outline-none text-white placeholder-gray-400 font-semibold text-lg transition-all"
               />
             </div>

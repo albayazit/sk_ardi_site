@@ -26,9 +26,9 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-12 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -59,7 +59,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           >
             {features.map((feature, index) => (
               <motion.div
