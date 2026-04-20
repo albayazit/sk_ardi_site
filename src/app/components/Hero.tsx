@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import heroBg from "../../assets/hero-bg.jpg";
 
 export function Hero() {
   return (
@@ -12,7 +13,7 @@ export function Hero() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="https://images.unsplash.com/photo-1706808849827-7366c098b317?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
+          src={heroBg}
           alt="Современный дом"
           className="w-full h-full object-cover"
         />
@@ -69,7 +70,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
