@@ -78,8 +78,8 @@ export function CompletedSection() {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
             Реализованные проекты
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl">
-            Портфолио построенных домов по всему Татарстану
+          <p className="text-base md:text-xl text-gray-600 max-w-2xl">
+            Портфолио построенных домов
           </p>
         </motion.div>
 

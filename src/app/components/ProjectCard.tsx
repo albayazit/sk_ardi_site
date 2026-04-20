@@ -41,7 +41,7 @@ export function ProjectCard({ title, location, area, bedrooms, features, price, 
 
       <div className="space-y-3">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+          <h3 className="text-lg md:text-2xl font-bold text-gray-900">{title}</h3>
           {price && status === "available" && (
             <div className="text-right">
               <div className="text-2xl font-bold text-gray-900">{price}</div>

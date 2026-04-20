@@ -15,7 +15,7 @@ export function ContactSection() {
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
               Начните строительство<br />вашего дома
             </h2>
-            <p className="text-xl text-gray-300 mb-16">
+            <p className="text-base md:text-xl text-gray-300 mb-16">
               Свяжитесь с нами для бесплатной консультации и расчета стоимости проекта
             </p>
 

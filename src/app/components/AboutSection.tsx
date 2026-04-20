@@ -38,7 +38,7 @@ export function AboutSection() {
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               О компании Арди
             </h2>
-            <div className="space-y-4 text-lg text-gray-600">
+            <div className="space-y-4 text-base md:text-lg text-gray-600">
               <p>
                 Мы специализируемся на строительстве частных домов в Татарстане.
                 Каждый проект — это уникальное решение, созданное с учетом пожеланий наших клиентов.

@@ -72,10 +72,10 @@ export function CalculatorSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Экспресс-расчет стоимости
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-base md:text-xl text-gray-300">
             Ответьте на 2 вопроса и узнайте примерную стоимость строительства
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ export function CalculatorSection() {
           <div className="space-y-10">
             {/* Вопрос 1: Этажность */}
             <div>
-              <h3 className="text-xl font-bold mb-4">1. Количество этажей</h3>
+              <h3 className="text-base md:text-xl font-bold mb-4">1. Количество этажей</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[1, 2].map((num) => (
                   <button
@@ -110,7 +110,7 @@ export function CalculatorSection() {
 
             {/* Вопрос 2: Площадь */}
             <div>
-              <h3 className="text-xl font-bold mb-4">2. Площадь дома</h3>
+              <h3 className="text-base md:text-xl font-bold mb-4">2. Площадь дома</h3>
               <input
                 type="number"
                 min={20}
