@@ -14,16 +14,8 @@ export function CalculatorSection() {
   const [agreed, setAgreed] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
 
-  const calculatePrice = () => {
-    const areaNum = parseFloat(area);
-    if (!floors || !areaNum || areaNum < 20) return null;
-
-    const pricePerSqm = floors === 1 ? 35000 : 38000;
-    const finalPrice = areaNum * pricePerSqm;
-    return Math.round(finalPrice / 100000) * 100000;
-  };
-
-  const price = calculatePrice();
+  const areaNum = parseFloat(area);
+  const isReady = Boolean(floors) && !!areaNum && areaNum >= 20;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,7 +36,6 @@ export function CalculatorSection() {
           contact,
           floors: `${floors} этаж(а)`,
           area: `${area} м²`,
-          price: price ? `от ${price.toLocaleString("ru-RU")} ₽` : "не рассчитана",
           _subject: "Новая заявка с сайта СК Арди",
         }),
       });
@@ -76,7 +67,7 @@ export function CalculatorSection() {
             Экспресс-расчет стоимости
           </h2>
           <p className="text-base md:text-xl text-gray-300">
-            Ответьте на 2 вопроса и узнайте примерную стоимость строительства
+            Ответьте на 2 вопроса — мы рассчитаем стоимость и перезвоним
           </p>
         </motion.div>
 
@@ -127,26 +118,24 @@ export function CalculatorSection() {
           </div>
 
           {/* Результат */}
-          {price && (
+          {isReady && (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4 }}
               className="mt-12 pt-10 border-t border-white/20"
             >
-              <div className="text-center mb-10">
-                <div className="text-gray-300 mb-2">Примерная стоимость строительства</div>
-                <div className="text-5xl md:text-6xl font-bold">
-                  от {price.toLocaleString("ru-RU")} ₽
-                </div>
-              </div>
-
               {/* Форма обратной связи */}
               {!sent ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-                  <p className="text-center text-gray-300 mb-6">
-                    Оставьте заявку — перезвоним и уточним детали
-                  </p>
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                      Оставьте заявку
+                    </h3>
+                    <p className="text-gray-300">
+                      Мы рассчитаем точную стоимость и перезвоним, чтобы обсудить детали
+                    </p>
+                  </div>
                   <input
                     type="text"
                     value={name}
@@ -163,24 +152,26 @@ export function CalculatorSection() {
                     required
                     className="w-full py-4 px-6 rounded-xl bg-white/10 hover:bg-white/20 focus:bg-white/20 outline-none text-white placeholder-gray-400 font-semibold transition-all"
                   />
-                  <label className="flex items-start gap-3 cursor-pointer">
+                  <label className="flex items-center gap-3 cursor-pointer">
                     <input
                       type="checkbox"
                       checked={agreed}
                       onChange={(e) => setAgreed(e.target.checked)}
-                      className="mt-1 w-4 h-4 accent-white cursor-pointer"
+                      className="w-4 h-4 shrink-0 accent-white cursor-pointer"
                       required
                     />
-                    <span className="text-gray-400 text-sm">
+                    <span className="text-gray-400 text-sm leading-snug">
                       Я соглашаюсь с{" "}
-                      <button
-                        type="button"
-                        onClick={() => setShowPrivacy(true)}
-                        className="text-white underline hover:text-gray-300 transition-colors"
+                      <span
+                        role="button"
+                        tabIndex={0}
+                        onClick={(e) => { e.preventDefault(); setShowPrivacy(true); }}
+                        onKeyDown={(e) => e.key === "Enter" && setShowPrivacy(true)}
+                        className="text-white underline hover:text-gray-300 transition-colors cursor-pointer"
                       >
                         политикой конфиденциальности
-                      </button>{" "}
-                      и даю согласие на обработку персональных данных
+                      </span>
+                      {" "}и даю согласие на обработку персональных данных
                     </span>
                   </label>
                   {error && <p className="text-red-400 text-sm text-center">{error}</p>}
@@ -221,9 +212,9 @@ export function CalculatorSection() {
 
           {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
 
-          {!price && (
+          {!isReady && (
             <div className="mt-10 text-center text-gray-400">
-              Выберите этажность и введите площадь для расчета стоимости
+              Выберите этажность и введите площадь, чтобы оставить заявку
             </div>
           )}
         </motion.div>
